@@ -1,0 +1,14 @@
+[
+{
+    "modinfoversion": 2,
+    "modid": "StructureTweaks",
+    "name": "StructureTweaks",
+    "description": "Tweak Cave, Ravine and Structures.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "http://forum.minecraftuser.jp/viewtopic.php?f=13&t=6672",
+    "authorList": ["A.K."],
+    "credits": "",
+    "requiredMods": ["Forge"]
+}
+]
