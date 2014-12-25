@@ -1,8 +1,8 @@
 package ak.structuretweaks.mapgen;
 
 import ak.structuretweaks.ST;
-import net.minecraft.block.Block;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.MapGenRavine;
 
 /**
@@ -10,7 +10,7 @@ import net.minecraft.world.gen.MapGenRavine;
  */
 public class MapGenRavineCustom extends MapGenRavine {
     @Override
-    protected void func_151538_a(World world, int chunkX, int chunkZ, int baseChunkX, int baseChunkZ, Block[] blocks) {
+    protected void func_180701_a(World world, int chunkX, int chunkZ, int baseChunkX, int baseChunkZ, ChunkPrimer primer) {
         if (ST.canGenerateRavine && this.rand.nextInt(ST.genChanceRavine) == 0)
         {
             double d0 = (double)(chunkX * 16 + this.rand.nextInt(16));
@@ -23,7 +23,7 @@ public class MapGenRavineCustom extends MapGenRavine {
                 float f = this.rand.nextFloat() * (float)Math.PI * 2.0F;
                 float f1 = (this.rand.nextFloat() - 0.5F) * 2.0F / 8.0F;
                 float f2 = (this.rand.nextFloat() * 2.0F + this.rand.nextFloat()) * 2.0F;
-                this.func_151540_a(this.rand.nextLong(), baseChunkX, baseChunkZ, blocks, d0, d1, d2, f2, f, f1, 0, 0, 3.0D);
+                this.func_180707_a(this.rand.nextLong(), baseChunkX, baseChunkZ, primer, d0, d1, d2, f2, f, f1, 0, 0, 3.0D);
             }
         }
     }

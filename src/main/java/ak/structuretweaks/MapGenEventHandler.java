@@ -1,13 +1,13 @@
 package ak.structuretweaks;
 
 import ak.structuretweaks.mapgen.*;
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.world.gen.MapGenCaves;
 import net.minecraft.world.gen.MapGenCavesHell;
 import net.minecraft.world.gen.MapGenRavine;
 import net.minecraft.world.gen.structure.*;
 import net.minecraftforge.event.terraingen.InitMapGenEvent;
+import net.minecraftforge.fml.common.FMLLog;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 /**
  * Created by A.K. on 14/07/30.

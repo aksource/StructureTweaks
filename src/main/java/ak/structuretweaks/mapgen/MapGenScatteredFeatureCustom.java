@@ -2,6 +2,7 @@ package ak.structuretweaks.mapgen;
 
 import ak.structuretweaks.ST;
 import net.minecraft.entity.monster.EntityWitch;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenScatteredFeature;
 
@@ -51,7 +52,7 @@ public class MapGenScatteredFeatureCustom extends MapGenScatteredFeature {
 
         if (k == i1 && l == j1)
         {
-            BiomeGenBase biomegenbase = this.worldObj.getWorldChunkManager().getBiomeGenAt(k * 16 + 8, l * 16 + 8);
+            BiomeGenBase biomegenbase = this.worldObj.getWorldChunkManager().func_180631_a(new BlockPos(k * 16 + 8, 0, l * 16 + 8));
             for (BiomeGenBase biomeGenBase1 : biomelist) {
                 if (biomegenbase == biomeGenBase1)
                 {

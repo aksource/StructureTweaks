@@ -1,16 +1,18 @@
 package ak.structuretweaks.mapgen;
 
 import ak.structuretweaks.ST;
-import net.minecraft.block.Block;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.MapGenCavesHell;
 
 /**
  * Created by A.K. on 14/07/31.
  */
 public class MapGenCavesHellCustom extends MapGenCavesHell {
+
+    //recursiveGenerate
     @Override
-    protected void func_151538_a(World world, int chunkX, int chunkZ, int baseChunkX, int baseChunkZ, Block[] blocks) {
+    protected void func_180701_a(World world, int chunkX, int chunkZ, int baseChunkX, int baseChunkZ, ChunkPrimer primer) {
         if (!ST.canGenerateNetherCave) {
             return;
         }
@@ -30,7 +32,7 @@ public class MapGenCavesHellCustom extends MapGenCavesHell {
 
             if (this.rand.nextInt(ST.genParamNetherCave03) == 0)
             {
-                this.func_151544_a(this.rand.nextLong(), baseChunkX, baseChunkZ, blocks, d0, d1, d2);
+                this.func_180705_a(this.rand.nextLong(), baseChunkX, baseChunkZ, primer, d0, d1, d2);
                 k1 += this.rand.nextInt(ST.genParamNetherCave04);
             }
 
@@ -39,7 +41,7 @@ public class MapGenCavesHellCustom extends MapGenCavesHell {
                 float f = this.rand.nextFloat() * (float)Math.PI * 2.0F;
                 float f1 = (this.rand.nextFloat() - 0.5F) * 2.0F / 8.0F;
                 float f2 = this.rand.nextFloat() * 2.0F + this.rand.nextFloat();
-                this.func_151543_a(this.rand.nextLong(), baseChunkX, baseChunkZ, blocks, d0, d1, d2, f2 * 2.0F, f, f1, 0, 0, 0.5D);
+                this.func_180704_a(this.rand.nextLong(), baseChunkX, baseChunkZ, primer, d0, d1, d2, f2 * 2.0F, f, f1, 0, 0, 0.5D);
             }
         }
     }

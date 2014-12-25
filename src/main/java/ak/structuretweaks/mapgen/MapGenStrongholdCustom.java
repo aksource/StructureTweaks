@@ -1,8 +1,8 @@
 package ak.structuretweaks.mapgen;
 
 import ak.structuretweaks.ST;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.ChunkCoordIntPair;
-import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.gen.structure.MapGenStronghold;
 
 import java.util.Random;
@@ -40,12 +40,12 @@ public class MapGenStrongholdCustom extends MapGenStronghold {
                 double d1 = (1.25D * (double)l + random.nextDouble()) * this.distance * (double)l;
                 int j1 = (int)Math.round(Math.cos(d0) * d1);
                 int k1 = (int)Math.round(Math.sin(d0) * d1);
-                ChunkPosition chunkposition = this.worldObj.getWorldChunkManager().findBiomePosition((j1 << 4) + 8, (k1 << 4) + 8, 112, this.field_151546_e, random);
+                BlockPos blockPos = this.worldObj.getWorldChunkManager().findBiomePosition((j1 << 4) + 8, (k1 << 4) + 8, 112, this.field_151546_e, random);
 
-                if (chunkposition != null)
+                if (blockPos != null)
                 {
-                    j1 = chunkposition.chunkPosX >> 4;
-                    k1 = chunkposition.chunkPosZ >> 4;
+                    j1 = blockPos.getX() >> 4;
+                    k1 = blockPos.getZ() >> 4;
                 }
 
                 this.structureCoords[i1] = new ChunkCoordIntPair(j1, k1);

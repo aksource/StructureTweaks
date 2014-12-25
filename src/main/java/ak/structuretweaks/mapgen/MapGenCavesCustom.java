@@ -1,16 +1,18 @@
 package ak.structuretweaks.mapgen;
 
 import ak.structuretweaks.ST;
-import net.minecraft.block.Block;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.MapGenCaves;
 
 /**
  * Created by A.K. on 14/07/31.
  */
 public class MapGenCavesCustom extends MapGenCaves {
+
+    //recursiveGenerate
     @Override
-    protected void func_151538_a(World world, int chunkX, int chunkZ, int baseChunkX, int baseChunkZ, Block[] blocks) {
+    protected void func_180701_a(World world, int chunkX, int chunkZ, int baseChunkX, int baseChunkZ, ChunkPrimer primer) {
         if (!ST.canGenerateCave) {
             return;
         }
@@ -30,7 +32,7 @@ public class MapGenCavesCustom extends MapGenCaves {
 
             if (this.rand.nextInt(ST.genParamCave03) == 0)
             {
-                this.func_151542_a(this.rand.nextLong(), baseChunkX, baseChunkZ, blocks, d0, d1, d2);
+                this.func_180703_a(this.rand.nextLong(), baseChunkX, baseChunkZ, primer, d0, d1, d2);
                 k1 += this.rand.nextInt(ST.genParamCave04);
             }
 
@@ -45,7 +47,7 @@ public class MapGenCavesCustom extends MapGenCaves {
                     f2 *= this.rand.nextFloat() * this.rand.nextFloat() * 3.0F + 1.0F;
                 }
 
-                this.func_151541_a(this.rand.nextLong(), baseChunkX, baseChunkZ, blocks, d0, d1, d2, f2, f, f1, 0, 0, 1.0D);
+                this.func_180702_a(this.rand.nextLong(), baseChunkX, baseChunkZ, primer, d0, d1, d2, f2, f, f1, 0, 0, 1.0D);
             }
         }
     }
