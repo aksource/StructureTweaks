@@ -88,14 +88,14 @@ public class ST {
         genParamCave01 = config.get(CategoryCave, "CaveGenerateParam01Value", genParamCave01, "洞窟生成パラメータその１：生成処理のFor文を回す回数を決定する因子").getInt();
         genParamCave02 = config.get(CategoryCave, "CaveGenerateParam02Value", genParamCave02, "洞窟生成パラメータその２：このパラメータ分の１の確率で生成処理を行う").getInt();
         genParamCave03 = config.get(CategoryCave, "CaveGenerateParam03Value", genParamCave03, "洞窟生成パラメータその３：このパラメータ分の１の確率で生成処理その１を行う").getInt();
-        genParamCave04 = config.get(CategoryCave, "CaveGenerateParam04Value", genParamCave04, "洞窟生成パラメータその４：１～このパラメータのランダムな回数で生成処理その２を行う").getInt();
+        genParamCave04 = config.get(CategoryCave, "CaveGenerateParam04Value", genParamCave04, "洞窟生成パラメータその４：１〜このパラメータのランダムな回数で生成処理その２を行う").getInt();
         genParamCave05 = config.get(CategoryCave, "CaveGenerateParam05Value", genParamCave05, "洞窟生成パラメータその５：このパラメータ分の１の確率で乱数処理を追加で行う").getInt();
 
         canGenerateNetherCave = config.get(CategoryNetherCave, "NetherCaveGenerate", canGenerateNetherCave, "ネザー洞窟を生成するかどうか").getBoolean();
         genParamNetherCave01 = config.get(CategoryNetherCave, "NetherCaveGenerateParam01Value", genParamNetherCave01, "ネザー洞窟生成パラメータその１：生成処理のFor文を回す回数を決定する因子").getInt();
         genParamNetherCave02 = config.get(CategoryNetherCave, "NetherCaveGenerateParam02Value", genParamNetherCave02, "洞窟生成パラメータその２：このパラメータ分の１の確率で生成処理を行う").getInt();
         genParamNetherCave03 = config.get(CategoryNetherCave, "NetherCaveGenerateParam03Value", genParamNetherCave03, "洞窟生成パラメータその３：このパラメータ分の１の確率で生成処理その１を行う").getInt();
-        genParamNetherCave04 = config.get(CategoryNetherCave, "NetherCaveGenerateParam04Value", genParamNetherCave04, "洞窟生成パラメータその４：１～このパラメータのランダムな回数で生成処理その２を行う").getInt();
+        genParamNetherCave04 = config.get(CategoryNetherCave, "NetherCaveGenerateParam04Value", genParamNetherCave04, "洞窟生成パラメータその４：１〜このパラメータのランダムな回数で生成処理その２を行う").getInt();
 
         canGenerateRavine = config.get(CategoryRavine, "RavineGenerate", canGenerateRavine, "渓谷を生成するかどうか").getBoolean();
         genChanceRavine = config.get(CategoryRavine, "RavineGenerateChanceValue", genChanceRavine, "渓谷生成パラメータ").getInt();
